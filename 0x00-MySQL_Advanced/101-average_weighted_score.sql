@@ -2,7 +2,7 @@
 -- that computes and store the average weighted score for all students.
 DELIMITER //
 
-CREATE PROCEDURE ComputeAverageWeightedScoreForUser()
+CREATE PROCEDURE ComputeAverageWeightedScoreForUsers()
 BEGIN
     UPDATE users AS users,
 	       (SELECT users.id, SUM(score * weight) / SUM(weight) AS weight_avg
